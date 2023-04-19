@@ -1,0 +1,46 @@
+version: '3'
+services:
+     
+
+  rasa-full:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: rasa-full
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "5005:5005"
+      - "5055:5055"
+      - "443:443"
+    volumes:
+      #- ./src/SilimedNew/:/var/www
+      - ./:/bot
+    #working_dir: /var/ww
+    command:
+      #- run
+      #- --enable-api
+      #- --cors
+      #- "*"
+      - run
+      - --model 
+      - models 
+      - --enable-api 
+      - --cors 
+      - "*" 
+      - --debug
+    #volumes:
+     # - ./teste:/var/www/html
+    networks:
+      - app-network-bridge-rasa
+      
+
+
+networks: 
+  app-network-bridge-rasa: 
+    driver: bridge 
+    
+volumes: 
+  data: 
+    driver: local 
+    #external: true

@@ -1,0 +1,103 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hi
+    - ola
+    - tudo bom
+    - oie
+    - fala comigo
+    - e ai mano
+    - oi
+
+- intent: goodbye
+  examples: |
+    - até mais
+    - vlw, até a próxima
+    - tchau, ja vai tarde!
+
+- intent: affirm
+  examples: |
+    - yes
+    - sim
+    - certo
+    - ok
+
+- intent: deny
+  examples: |
+    - nao
+    - negado
+    - not
+    - nunca
+
+- intent: mood_great
+  examples: |
+    - muito bom
+    - legal demais
+    - me sinto bem
+    - estou otimo
+
+- intent: mood_unhappy
+  examples: |
+    - nao me sinto bem
+    - estou triste
+    - estou mal
+    - nao estou bem
+    - estou na bad
+
+- intent: bot_challenge
+  examples: |
+    - quem é voce ?
+    - voce é um bot ?
+    - voce vai dominar o mundo ?
+    - voce vai substituir o programador ?
+
+- intent: consult_called
+  examples: |
+    - Consultar previsao do tempo
+    - consultar
+    - Conultar
+    - Consultar
+    - Consulta a previsao do tempo
+    - Consultar meu previsao do tempo
+    - como ta o tempo 
+    - Consultar tempo
+    - consultar o previsao
+    - Consultar previsao do tempo
+    - quero consultar meu previsao do tempo
+    - quero consultar previsao do tempo 
+    - consultar previsao do tempo
+    - como consultar previsao do tempo?
+
+  
+- intent: city
+  examples: |
+    - Acre
+    - Alagoas
+    - Amapa
+    - Amazonas
+    - Bahia
+    - Ceará
+    - Distrito Federal
+    - Espírito Santo
+    - Goiás
+    - Maranhão
+    - Mato Grosso
+    - Mato Grosso do Sul
+    - Minas Gerais
+    - Pará
+    - Paraíba
+    - Paraná
+    - Pernambuco
+    - Piauí
+    - Rio de Janeiro
+    - Rio Grande do Norte
+    - Rio Grande do Sul
+    - Rondônia
+    - Roraima
+    - Santa Catarina
+    - São Paulo
+    - Sergipe
+    - Tocantins

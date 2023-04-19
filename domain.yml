@@ -1,0 +1,108 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - consult_called
+  - city
+
+actions:
+  - action_weather_api
+  
+slots:
+  conversationId:
+    type: any
+    influence_conversation: false
+    
+responses:
+  utter_greet:
+  - text: "Ola, tudo bom ? como eu posso te ajudar"
+
+  utter_cheer_up:
+  - text: "algo pra te animar:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Como posso te ajudar?"
+
+  utter_happy:
+  - text: "Legal!"
+
+  utter_goodbye:
+  - text: "Obrigado pelo contato, iremos encerrar nossa conversa!"
+
+  utter_iamabot:
+  - text: "Eu sou um robo!"
+  
+  utter_consult_ticket_error:
+  - text: |-
+      😥 putz, azedou.
+  
+  utter_consult_ticket_loading:
+  - text: |-
+      APrevisão do tempo para RJ é de 400graus pra cima.
+      
+  utter_ask_has_ticket_number:
+  - text: "Certo!!! Agora me fala o nome do ESTADO ?"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+forms:
+  third_info_form:
+    phone:
+    - type: from_text
+    email:
+    - type: from_text
+  ticket_form:
+    consult_ticket_id:
+    - type: from_text
+  equipment_repair_form:
+    serial_number:
+    - type: from_text
+    equity:
+    - type: from_text
+    repair_description:
+    - type: from_text
+  user_email_form:
+    email:
+    - type: from_text
+  user_form:
+    email:
+    - type: from_text
+    phone:
+    - type: from_text
+  service_request_form:
+    service_description:
+    - type: from_text
+    service_reason:
+    - type: from_text
+  equipment_request_form:
+    equipment_description:
+    - type: from_text
+    equipment_reason:
+    - type: from_text
+  third_user_form:
+    email:
+    - type: from_text
+    registration:
+    - type: from_text
+  aditional_info_form:
+    address:
+    - type: from_text
+    craai:
+    - type: from_text
+    details:
+    - type: from_text
+    schedule:
+    - type: from_text
+  doubt_form: 
+    description_doubt: 
+    - type: from_text
+
